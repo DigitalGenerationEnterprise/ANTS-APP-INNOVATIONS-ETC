@@ -1,0 +1,44 @@
+CHRISTOPHER-OPENCLAW-AUTOPILOT.sh
+CHRISTOPHER-OPENCLAW-AUTOPILOT-README.md
+
+It includes:
+
+Seven OpenClaw agents: Christopher, Strategist, Researcher, Builder, QA, Browser, and Memory.
+OpenClaw ↔ Codex/ChatGPT-style terminal conversations using pipeable codex exec. Official Codex documentation
+Claude Code, OpenAI API, and Ollama fallback routes.
+OpenClaw’s browser dashboard, isolated browser, ChatGPT webpage route, and official Chrome extension. OpenClaw browser documentation
+Persistent mission transcripts, plans, task breakdowns, QA verdicts, and bounded repair loops.
+Full OpenClaw/Gateway/browser/model/agent/GPU/Codex/Ollama doctor checks.
+Daily systemd continuation mode.
+Supported cross-agent sessions and delegation. OpenClaw session tools
+Planning agents are technically restricted from host-wide execution.
+No autonomous posting, contacting family/friends, spending, deleting data, exposing services, deploying, or pushing to GitHub.
+
+Run on Kubuntu:
+
+chmod +x CHRISTOPHER-OPENCLAW-AUTOPILOT.sh
+./CHRISTOPHER-OPENCLAW-AUTOPILOT.sh install --install-missing
+
+Then:
+
+~/AI-PC/christopher/bin/christopher doctor
+~/AI-PC/christopher/bin/christopher dashboard
+
+First real conversation:
+
+~/AI-PC/christopher/bin/christopher council \
+  "Inspect my projects, decide what will improve Anthony's life most, break it into tasks, and identify the first useful task" \
+  --rounds 3
+
+Authorize bounded project work:
+
+~/AI-PC/christopher/bin/christopher mission \
+  "Inspect this application, fix the highest-priority verified problem, and test it" \
+  --project ~/Projects/mygig \
+  --execute
+
+Enable daily continuation:
+
+~/AI-PC/christopher/bin/christopher schedule enable --execute
+
+The script passed Bash syntax checking, embedded Python compilation, clean-install, provider-failure, and doctor smoke tests.
